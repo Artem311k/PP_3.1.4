@@ -206,6 +206,7 @@ export function updateCurrentUser(e) {
     }).then((response) => {
             if (response.ok) {
                 fillUsersTable()
+                userEditForm.password.value = ''
                 document.getElementById('closeEditModalWindow').click()
                 getSuccessMessage('User has been updated!')
                 $('.nav-tabs a[href="#UserTable"]').tab('show')
